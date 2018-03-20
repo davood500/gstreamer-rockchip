@@ -394,11 +394,6 @@ AG_GST_CHECK_FEATURE(VPUDEC, [rockchip vpu legacy libraries], vpudec, [
     HAVE_VPUDEC=yes, HAVE_VPUDEC=no)
 ])
 
-translit(dnm, m, l) AM_CONDITIONAL(USE_RKXIMAGE, true)
-AG_GST_CHECK_FEATURE(RKXIMAGE, [drm/kms and x11 libraries], rkximage, [
-  PKG_CHECK_MODULES([RKXIMAGE], [x11 libdrm], HAVE_RKXIMAGE=yes, HAVE_RKXIMAGE=no)
-])
-
 dnl keep this alphabetic per directory, please
 AC_CONFIG_FILES(
 common/m4/Makefile
