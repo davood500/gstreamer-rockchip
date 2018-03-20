@@ -394,7 +394,7 @@ gst_mpp_video_enc_process_buffer (GstMppVideoEnc * self, GstBuffer * buffer)
         }
 
         /* Fill the buffer */
-        if (intra_flag) {
+        if (intra_flag && self->sps_packet) {
           const gpointer *sps_ptr = mpp_packet_get_pos (self->sps_packet);
           gsize sps_len = mpp_packet_get_length (self->sps_packet);
 
